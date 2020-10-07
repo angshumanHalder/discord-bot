@@ -4,6 +4,8 @@ export const DEFAULT_MESSAGE =
 export const COMMAND_NOT_FOUND =
   "I don't understand the command. Try '#HELP' !";
 
+export const FILE_NOT_FOUND = "Sorry! I do not have the file with me.";
+
 export const HELP = `
 Hi, I guess you might need some help giving me instructions.
 Here are the list of commands --
@@ -13,4 +15,5 @@ Here are the list of commands --
 
 #SLL        Singly Linked List Implmentation
 #DLL        Doubly Linked List Implmentation
+#UNF        Union Find Implementation (Used to find Minimum Spanning Tree)
 `;

@@ -13,7 +13,9 @@ export class MessageHandler {
       if (message.content.startsWith("#")) {
         this.commandHandler.processCommand(message);
       } else {
-        message.channel.send(DEFAULT_MESSAGE);
+        message.channel.send(DEFAULT_MESSAGE).catch((err) => {
+          console.log(err);
+        });
       }
     });
   }
