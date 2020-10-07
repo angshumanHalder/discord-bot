@@ -52,4 +52,8 @@ export class Bot {
         console.log(`Could not connect to Discord. Error: ${err}`);
       });
   }
+
+  destroy(): void {
+    this.client.destroy();
+  }
 }
