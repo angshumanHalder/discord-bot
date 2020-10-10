@@ -1,5 +1,9 @@
 import { Message, MessageAttachment } from "discord.js";
-import { LinkedListFileHandler, UnionFindFileHandler } from "../FileHandlers";
+import {
+  LinkedListFileHandler,
+  PriorityQueueFileHandler,
+  UnionFindFileHandler,
+} from "../FileHandlers";
 import { Commands } from "./Commands";
 import { COMMAND_NOT_FOUND, FILE_NOT_FOUND, HELP } from "../helpers/messages";
 
@@ -31,6 +35,8 @@ export class CommandHandler {
         return LinkedListFileHandler.handleSLL();
       case Commands.UNF:
         return UnionFindFileHandler.handleUnf();
+      case Commands.PQ:
+        return PriorityQueueFileHandler.handlePQ();
       case Commands.HELP:
         return this.handleHelpCommand();
       default:
