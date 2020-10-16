@@ -32,6 +32,8 @@ export class CommandHandler {
         return FileHandler.getInstance().handleFile(Locations.SINGLY_LINKED_LIST_FILE);
       case Commands.UNF:
         return FileHandler.getInstance().handleFile(Locations.UNION_FIND);
+      case Commands.PQ:
+        return FileHandler.getInstance().handleFile(Locations.PRIORITY_QUEUE);
       case Commands.HELP:
         return this.handleHelpCommand();
       default:
