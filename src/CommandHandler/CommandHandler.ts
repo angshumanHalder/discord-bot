@@ -1,11 +1,8 @@
 import { Message, MessageAttachment } from "discord.js";
-import {
-  LinkedListFileHandler,
-  PriorityQueueFileHandler,
-  UnionFindFileHandler,
-} from "../FileHandlers";
 import { Commands } from "./Commands";
 import { COMMAND_NOT_FOUND, FILE_NOT_FOUND, HELP } from "../helpers/messages";
+import { FileHandler } from "../FileHandlers/FileHandler";
+import { Locations } from '../helpers/fileLocations';
 
 export type ReplyMessage = string | MessageAttachment;
 
@@ -30,13 +27,11 @@ export class CommandHandler {
   private handleCommand(command: string): ReplyMessage {
     switch (command) {
       case Commands.DLL:
-        return LinkedListFileHandler.handleDLL();
+        return FileHandler.getInstance().handleFile(Locations.DOUBLY_LINKED_LIST_FILE);
       case Commands.SLL:
-        return LinkedListFileHandler.handleSLL();
+        return FileHandler.getInstance().handleFile(Locations.SINGLY_LINKED_LIST_FILE);
       case Commands.UNF:
-        return UnionFindFileHandler.handleUnf();
-      case Commands.PQ:
-        return PriorityQueueFileHandler.handlePQ();
+        return FileHandler.getInstance().handleFile(Locations.UNION_FIND);
       case Commands.HELP:
         return this.handleHelpCommand();
       default:
