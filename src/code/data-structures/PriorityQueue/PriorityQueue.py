@@ -6,7 +6,8 @@ class PriorityQueue:
 
         def __str__(self):
             return (
-                " { val: " + str(self.value) + ", priority: " + str(self.priority) + "}"
+                (" { val: " + str(self.value) +
+                    ", priority: " + str(self.priority) + "}")
             )
 
     def __init__(self):

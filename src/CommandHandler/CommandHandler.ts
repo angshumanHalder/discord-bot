@@ -34,6 +34,8 @@ export class CommandHandler {
         return FileHandler.getInstance().handleFile(Locations.UNION_FIND);
       case Commands.PQ:
         return FileHandler.getInstance().handleFile(Locations.PRIORITY_QUEUE);
+      case Commands.IPQ:
+        return FileHandler.getInstance().handleFile(Locations.INDEXED_PRIORITY_QUEUE);
       case Commands.HELP:
         return this.handleHelpCommand();
       default:

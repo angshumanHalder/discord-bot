@@ -3,5 +3,6 @@ export enum Commands {
   SLL = "SLL",
   UNF = "UNF",
   PQ = "PQ",
+  IPQ = "IPQ",
   HELP = "HELP",
 }
