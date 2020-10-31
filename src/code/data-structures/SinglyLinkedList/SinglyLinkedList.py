@@ -5,6 +5,7 @@ class SinglyLinkedList:
         def __init__(self, value):
             self.value = value
             self.next = None
+
         def __str__(self):
             return str(self.value)
 
@@ -39,7 +40,7 @@ class SinglyLinkedList:
         if self._is_empty() and index != 0:
             raise IndexError("List is empty")
         self._is_out_of_bounds(index)
-        
+
         if index == 0:
             self.push_beginning(value)
         elif index >= self.length - 1:
@@ -118,7 +119,7 @@ class SinglyLinkedList:
         if self._is_empty():
             raise IndexError("List is empty")
         self._is_out_of_bounds(index)
-        
+
         i = 0
         temp_node = self.head
         while i < index:
@@ -143,9 +144,10 @@ class SinglyLinkedList:
         return True
 
     """ Helper methods """
+
     def size(self):
         return self.length
-    
+
     def _is_empty(self):
         return self.length == 0
 
@@ -163,4 +165,3 @@ class SinglyLinkedList:
             temp_node = temp_node.next
         lst_str += "]"
         return lst_str
-  
