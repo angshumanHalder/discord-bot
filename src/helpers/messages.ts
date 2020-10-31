@@ -16,4 +16,7 @@ Here are the list of commands --
 #SLL        Singly Linked List Implmentation
 #DLL        Doubly Linked List Implmentation
 #UNF        Union Find Implementation (Used to find Minimum Spanning Tree)
+#BST        Binary Search Tree Implementation
+#PQ         Priority Queue Implementation
+#IPQ        Indexed Priority Queue
 `;

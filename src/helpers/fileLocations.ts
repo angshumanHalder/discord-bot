@@ -3,5 +3,6 @@ export enum Locations {
   SINGLY_LINKED_LIST_FILE = "data-structures/SinglyLinkedList/SinglyLinkedList.py",
   UNION_FIND = "data-structures/UnionFind/UnionFind.py",
   PRIORITY_QUEUE = "data-structures/PriorityQueue/PriorityQueue.py",
-  INDEXED_PRIORITY_QUEUE = "data-structures/IndexedPriorityQueue/IndexedPriorityQueue.py"
+  INDEXED_PRIORITY_QUEUE = "data-structures/IndexedPriorityQueue/IndexedPriorityQueue.py",
+  BINARY_SEARCH_TREE = "data-structures/BinarySearchTree/BinarySearchTree.py"
 }

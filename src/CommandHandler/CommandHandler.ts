@@ -2,7 +2,7 @@ import { Message, MessageAttachment } from "discord.js";
 import { Commands } from "./Commands";
 import { COMMAND_NOT_FOUND, FILE_NOT_FOUND, HELP } from "../helpers/messages";
 import { FileHandler } from "../FileHandlers/FileHandler";
-import { Locations } from '../helpers/fileLocations';
+import { Locations } from "../helpers/fileLocations";
 
 export type ReplyMessage = string | MessageAttachment;
 
@@ -27,15 +27,25 @@ export class CommandHandler {
   private handleCommand(command: string): ReplyMessage {
     switch (command) {
       case Commands.DLL:
-        return FileHandler.getInstance().handleFile(Locations.DOUBLY_LINKED_LIST_FILE);
+        return FileHandler.getInstance().handleFile(
+          Locations.DOUBLY_LINKED_LIST_FILE
+        );
       case Commands.SLL:
-        return FileHandler.getInstance().handleFile(Locations.SINGLY_LINKED_LIST_FILE);
+        return FileHandler.getInstance().handleFile(
+          Locations.SINGLY_LINKED_LIST_FILE
+        );
       case Commands.UNF:
         return FileHandler.getInstance().handleFile(Locations.UNION_FIND);
       case Commands.PQ:
         return FileHandler.getInstance().handleFile(Locations.PRIORITY_QUEUE);
       case Commands.IPQ:
-        return FileHandler.getInstance().handleFile(Locations.INDEXED_PRIORITY_QUEUE);
+        return FileHandler.getInstance().handleFile(
+          Locations.INDEXED_PRIORITY_QUEUE
+        );
+      case Commands.BST:
+        return FileHandler.getInstance().handleFile(
+          Locations.BINARY_SEARCH_TREE
+        );
       case Commands.HELP:
         return this.handleHelpCommand();
       default:
