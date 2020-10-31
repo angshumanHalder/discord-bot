@@ -5,5 +5,7 @@ export enum Commands {
   PQ = "PQ",
   IPQ = "IPQ",
   BST = "BST",
+  STACK = "STACK",
+  QUE = "QUE",
   HELP = "HELP",
 }

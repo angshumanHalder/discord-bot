@@ -13,10 +13,12 @@ Here are the list of commands --
 
 -------------DATA-STRUCTURES-------------
 
-#SLL        Singly Linked List Implmentation
-#DLL        Doubly Linked List Implmentation
-#UNF        Union Find Implementation (Used to find Minimum Spanning Tree)
-#BST        Binary Search Tree Implementation
-#PQ         Priority Queue Implementation
-#IPQ        Indexed Priority Queue
+#SLL -- (Singly Linked List)
+#DLL -- (Doubly Linked List)
+#UNF -- (Union Find)
+#BST -- (Binary Search Tree)
+#PQ -- (Priority Queue)
+#IPQ -- (Indexed Priority Queue)
+#STACK -- (Stack)
+#QUE -- (Queue)
 `;

@@ -46,6 +46,10 @@ export class CommandHandler {
         return FileHandler.getInstance().handleFile(
           Locations.BINARY_SEARCH_TREE
         );
+      case Commands.STACK:
+        return FileHandler.getInstance().handleFile(Locations.STACK);
+      case Commands.QUE:
+        return FileHandler.getInstance().handleFile(Locations.QUEUE);
       case Commands.HELP:
         return this.handleHelpCommand();
       default:
