@@ -24,7 +24,7 @@ class BinarySearchTree:
 
     def __add_node(self, node, val):
         if not node:
-            node = self.__Node(val)
+            node = self._Node(val)
         else:
             if node.val > val:
                 node.left = self.__add_node(node.left, val)
