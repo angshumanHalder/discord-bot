@@ -21,4 +21,5 @@ Here are the list of commands --
 #IPQ -- (Indexed Priority Queue)
 #STACK -- (Stack)
 #QUE -- (Queue)
+#HASHTABLE -- (Hash Table)
 `;

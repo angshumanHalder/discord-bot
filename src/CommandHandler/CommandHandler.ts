@@ -50,6 +50,8 @@ export class CommandHandler {
         return FileHandler.getInstance().handleFile(Locations.STACK);
       case Commands.QUE:
         return FileHandler.getInstance().handleFile(Locations.QUEUE);
+      case Commands.HASHTABLE:
+        return FileHandler.getInstance().handleFile(Locations.HASH_TABLE);
       case Commands.HELP:
         return this.handleHelpCommand();
       default:

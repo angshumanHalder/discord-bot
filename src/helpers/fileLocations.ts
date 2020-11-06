@@ -7,4 +7,5 @@ export enum Locations {
   BINARY_SEARCH_TREE = "data-structures/BinarySearchTree/BinarySearchTree.py",
   STACK = "data-structures/Stack/Stack.py",
   QUEUE = "data-structures/Queue/Queue.py",
+  HASH_TABLE = "data-structures/HashTable/HashTable.py",
 }
