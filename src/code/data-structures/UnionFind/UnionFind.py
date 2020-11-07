@@ -15,26 +15,26 @@ class UnionFind:
         root = p
         while self.id[root] != root:
             root = self.id[root]
-        
+
         while p != root:
             nxt = self.id[p]
             self.id[p] = root
             p = nxt
         return root
-    
+
     def _connected(self, p, q):
         return self.find(p) == self.find(q)
-    
+
     def component_size(self):
         return self.size
-    
+
     def components(self):
         return self.num_components
 
     def unify(self, p, q):
         if self._connected(p, q):
             return
-        
+
         root_p = self.find(p)
         root_q = self.find(q)
 
@@ -45,4 +45,3 @@ class UnionFind:
             self.sz[root_q] += self.sz[root_p]
             self.id[root_q] = root_p
         self.num_components -= 1
-
