@@ -467,11 +467,10 @@ class HashTableOpenAddressingBase(ABC):
         i = offset
         x = 1
         while True:
-            x += 1
-            i = self._normalize_index(offset + self._probe(x))
-
             # Ignore deleted cells
             if self._keys[i] == HashTableOpenAddressingBase.TOMBSTONE:
+                i = self._normalize_index(offset + self._probe(x))
+                x += 1
                 continue
 
             # If key was not found in hash-table
@@ -486,6 +485,8 @@ class HashTableOpenAddressingBase(ABC):
                 self._keys[i] = HashTableOpenAddressingBase.TOMBSTONE
                 self._values[i] = None
                 return old_value
+            i = self._normalize_index(offset + self._probe(x))
+            x += 1
 
     # Return a string view of this hash-table
     def __repr__(self):
@@ -519,3 +520,29 @@ class HashTableLinearProbing(HashTableOpenAddressingBase):
     def _adjust_capacity(self):
         while HashTableLinearProbing._gcd(HashTableLinearProbing.LINEAR_CONSTANT, self._capacity) != 1:
             self._capacity += 1
+
+# Quadratic probing
+
+
+class HashTableQuadraticProbing(HashTableOpenAddressingBase):
+    def __init__(self, capacity, load_factor):
+        super().__init__(capacity=capacity, load_factor=load_factor)
+
+    def _setup_probing(self, key):
+        pass
+
+    def _probe(self, x):
+        # probing function (x^2 + x) / 2
+        return (x * x + x) >> 1
+
+    def _increase_capacity(self):
+        self._capacity = self._next_power_of_two()
+
+    def _adjust_capacity(self):
+        pow2 = 2 ** (self._capacity.bit_length() - 1)
+        if self._capacity == pow2:
+            return
+        self._increase_capacity()
+
+    def _next_power_of_two(self):
+        return 2 ** (self._capacity.bit_length() - 1) << 1
