@@ -8,5 +8,6 @@ export enum Commands {
   STACK = "STACK",
   QUE = "QUE",
   HASHTABLE = "HASHTABLE",
+  FTREE = "FTREE",
   HELP = "HELP",
 }

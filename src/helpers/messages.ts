@@ -22,4 +22,5 @@ Here are the list of commands --
 #STACK -- (Stack)
 #QUE -- (Queue)
 #HASHTABLE -- (Hash Table)
+#FTREE -- (Fenwick Tree)
 `;

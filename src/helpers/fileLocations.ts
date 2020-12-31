@@ -8,4 +8,5 @@ export enum Locations {
   STACK = "data-structures/Stack/Stack.py",
   QUEUE = "data-structures/Queue/Queue.py",
   HASH_TABLE = "data-structures/HashTable/HashTable.py",
+  FENWICK_TREE = "data-structures/FenwickTree/FenwickTree.py",
 }

@@ -52,6 +52,8 @@ export class CommandHandler {
         return FileHandler.getInstance().handleFile(Locations.QUEUE);
       case Commands.HASHTABLE:
         return FileHandler.getInstance().handleFile(Locations.HASH_TABLE);
+      case Commands.FTREE:
+        return FileHandler.getInstance().handleFile(Locations.FENWICK_TREE);
       case Commands.HELP:
         return this.handleHelpCommand();
       default:
